@@ -1,0 +1,64 @@
+<ion-header-bar class="bar bar-subheader" >
+    <div class="tabs" style="width: 100%">
+        <a class="tab-item" ui-sref="list" style="width: 100%; max-width: none;">
+            <p style="width: 100%">Te haz cruzado con estos descuentos!</p>
+        </a>
+
+    </div>
+</ion-header-bar>
+<ion-view view-title="Novedades" >
+    <ion-content class="" has-bouncing="true" >
+        <div ng-if="beneficios.length==0 || !beneficios" style="display: block"><div style="margin: 50% auto; width: 2%" ><ion-spinner  icon="android"></ion-spinner></div></div>
+        <div class="row" ng-repeat="itemes in beneficios">
+            <div class="offset-50" ng-repeat="item in itemes" style="padding: 2px;width: 50%;" >
+                <div class="list card" style="margin: 1px;" >
+                    <div class="item item-avatar" ng-click="to('tab.promotion', item.id)">
+                        <img ng-src="{{item.img1}}">
+
+                        <h2 style="font-size: 13px">{{item.establecimiento.nombre}}</h2>
+
+                        <p style="font-size: 10px; font-weight: 700">{{item.beneficio.tipo}} </p>
+                        <p style="font-size: 10px; ">{{item.beneficio.descripcion}} </p>
+                    </div>
+
+                    <div class="item item-image" ng-click="to('tab.promotion', item.id)"><img ng-src="{{item.img2}}" ></div>
+
+                    <div class="row">
+                        <div class="offset-50" style="width: 50%; "><a style="margin: 0; border: 0; text-align: center;font-size: 25px; padding: 0;" class="item item-icon-left assertive icon ion-android-share-alt" ng-click="share(item)"></a></div>
+                        <div class="offset-50"  style="width: 50%;border-left:1px solid #BBB"><a style="margin: 0; border: 0; text-align: center;font-size: 25px; padding: 0;" class="item item-icon-left assertive icon ion-heart" ng-click="to('tab.promotion', item.id)" ></a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--<div class="list card" ng-repeat="item in beneficios" ng-if="$even" style="width: 45%; padding: 0; margin: 2.5%; height: 252px !important;">
+            <div class="item item-avatar">
+                <img ng-src="{{giveMePicture(item.imagen)}}">
+
+                <h2 style="font-size: 13px">{{item.establecimiento.nombre}}</h2>
+
+                <p style="font-size: 10px">{{item.beneficio.tipo}} {{item.beneficio.descripcion}}</p>
+            </div>
+
+            <div class="item item-image"><img ng-src="{{giveMePicture2(item.imagen)}}" style=" height: 174px;"></div>
+
+            <div style=" display: flex;">
+                <a class="item item-icon-left assertive icon ion-android-close" href="#" style="font-style: italic; margin: 0; text-align: center; width: 50% !important"></a><a class="item item-icon-left assertive icon ion-heart" href="#" style="/* padding: 0; font-style: italic; margin: 0; width: 50% !important"></a>
+            </div>
+        </div>-->
+    </ion-content>
+
+
+    <!--<ion-content class="padding" has-bouncing="true">
+        <div ng-if="beneficios.length==0 || !beneficios" style="display: block"><div style="margin: 50% auto; width: 2%" ><ion-spinner  icon="android"></ion-spinner></div></div>
+        <ion-list>
+            <ion-item ng-repeat="item in beneficios" href="#/tab/feed/{{item.id}}" class="item item-thumbnail-left">
+                <img ng-src="{{giveMePicture(item.imagen)}}">
+                <h2>{{item.establecimiento.nombre}}</h2>
+                <p>{{item.beneficio.tipo}} {{item.beneficio.descripcion}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>-->
+</ion-view>

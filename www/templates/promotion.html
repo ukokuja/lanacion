@@ -1,0 +1,28 @@
+<ion-view view-title="{{item.establecimiento.nombre}}">
+    <ion-content class="padding">
+        <div class="list card" ng-if="item">
+
+            <div class="item item-avatar">
+                <img ng-src="{{item.img1}}">
+                <h2>{{item.beneficio.tipo}} en {{item.establecimiento.nombre}}</h2>
+                <p>{{item.beneficio.descripcion}} </p>
+            </div>
+
+            <div class="item item-body">
+                <img ng-if="item.point" class="full-image" ng-src="{{item.img2}}">
+                <p ng-if="!item.point || getShow(item.point)">
+                    <button ng-disabled="reservado()" ng-click="reservar()" class="button button-block button-positive">Reservar por 30 minutos</button>
+                </p>
+
+                <a  class="item item-icon-left" style="font-size: 13px;" ng-if="getPedidos()>0">
+                    <i class="icon ion-android-cart"></i> {{getPedidos()}} persona<span ng-if="getPedidos()>1">s pidieron</span> <span ng-if="getPedidos()==1">pidio</span> en la ultima hora
+
+                </a>
+                <a  class="item item-icon-left" style="font-size: 13px; border-bottom: 0px" ng-if="item.point">
+                    <i class="icon ion-android-pin"></i> <span ng-if="getMinutos(item.point)">Estas a {{getMinutos(item.point)}} </span>
+                </a>
+                <div ng-if="item.point" class="full-image" ng-src="{{getMap(item.point)}}">
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

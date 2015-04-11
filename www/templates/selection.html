@@ -1,0 +1,23 @@
+<ion-header-bar class="bar bar-subheader" >
+    <div class="tabs" style="width: 100%">
+        <a class="tab-item" ui-sref="list" style="width: 100%; max-width: none;">
+            <p style="width: 100%">Elige todas las que quieras</p>
+        </a>
+
+    </div>
+</ion-header-bar>
+<ion-view view-title="Categorias" hide-back-button="true">
+    <ion-content class="">
+        <ul class="list">
+            <li class="item item-checkbox" ng-repeat="item in categorias" ng-if="item.nombre" style="background: {{giveMeColor(item.color)}}">
+                <label class="checkbox">
+                    <input type="checkbox">
+                </label>
+                {{item.nombre}}
+            </li>
+        </ul>
+        <div class="button-bar bar-dark"  style="width: 90%; margin: 0 auto; height: 65%;">
+            <a class="button "  href="#/tab/feed" style="background: #3b5998;border-top-left-radius: 2px; border-bottom-left-radius: 2px; display: block !important; width: 90%; top: 0%; height: 0" ><span>Continuar</span></a>
+        </div>
+    </ion-content>
+</ion-view>

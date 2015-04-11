@@ -1,0 +1,64 @@
+.item-avatar > img:first-child{
+    max-width: 32px !important;
+    max-height: 32px !important;
+}
+
+
+.backgroundAnimate {
+    animation: animatedBackground 7s linear;
+    -webkit-animation:  animatedBackground 7s linear;
+    -moz-animation:     animatedBackground 7s linear;
+    -o-animation:       animatedBackground 7s linear;
+
+
+}
+
+@keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -300px 0; }
+}
+@-moz-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -300px 0; }
+}
+@-webkit-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -300px 0; }
+}
+@-ms-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -300px 0; }
+}
+@-o-keyframes animatedBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: -300px 0; }
+}
+.backgroundAnimate2 {
+    animation: animatedBackground2 7s linear;
+    -webkit-animation:  animatedBackground2 7s linear;
+    -moz-animation:     animatedBackground2 7s linear;
+    -o-animation:       animatedBackground2 7s linear;
+
+
+}
+
+@keyframes animatedBackground2 {
+    0% { background-position: -300px 0; }
+    100% { background-position: 0 0; }
+}
+@-moz-keyframes animatedBackground2 {
+    0% { background-position: -300px 0; }
+    100% { background-position: 0 0; }
+}
+@-webkit-keyframes animatedBackground2 {
+    0% { background-position: -300px 0; }
+    100% { background-position: 0 0; }
+}
+@-ms-keyframes animatedBackground2 {
+    0% { background-position: -300px 0; }
+    100% { background-position: 0 0; }
+}
+@-o-keyframes animatedBackground2 {
+    0% { background-position: -300px 0; }
+    100% { background-position: 0 0; }
+}

@@ -1,0 +1,26 @@
+<ion-view view-title="Welcome" hide-nav-bar="true">
+    <ion-content class="padding" scroll="false" ng-style="background" ng-class="{'backgroundAnimate': indexBackground == animationBackground && par > 0, 'backgroundAnimate2': indexBackground == animationBackground && par < 0}">
+        <img class="inCenter" src="https://lh3.googleusercontent.com/t7c-W2G2DLuK8V-dWp246A1YycAMfDOpnEDapPCM4xWpGblvDzCYGiOSs1V6h9VmBQWCEg=w1277-h561" style="display: block; margin: 10% auto; margin-bottom: 5%; width: 40%">
+        <div class="row inLarge" style="color :#FFF; font-size: large;text-align: center;font-size: medium ">
+            <div class="col" >
+                <span> Inicia sesion y aprovecha los beneficios</span>
+            </div>
+        </div>
+
+        <img src="img/coffee-hands-mobile-phone-4831.jpg" style="width: 0px">
+        <img src="img/fashion-put-on-shoes-4180.jpeg" style="width: 0px">
+        <img src="img/chilling-friends-group-4162.jpeg" style="width: 0px">
+        <div class="list list-inset" >
+            <label class="item item-input">
+                <input ng-model="input.email" type="text" placeholder="Email">
+            </label>
+            <label class="item item-input">
+                <input ng-model="input.email" type="text" placeholder="Numero de socio">
+            </label>
+        </div>
+        <div class="button-bar bar-dark"  style="width: 90%; margin: 0 auto; height: 65%;">
+            <a class="button "  href="#/selection" style="background: #3b5998;border-top-left-radius: 2px; border-bottom-left-radius: 2px; display: block !important; width: 90%; top: 30%; height: 0" ><span>Continuar</span></a>
+        </div>
+
+    </ion-content>
+</ion-view>

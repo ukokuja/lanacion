@@ -1,0 +1,19 @@
+{
+  "name": "beneficios",
+  "version": "1.0.0",
+  "description": "beneficios: An Ionic project",
+  "dependencies": {
+    "firebase": "^2.2.3",
+    "gulp": "^3.5.6",
+    "gulp-concat": "^2.2.0",
+    "gulp-minify-css": "^0.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.3.3"
+  },
+  "devDependencies": {
+    "bower": "^1.3.3",
+    "gulp-util": "^2.2.14",
+    "shelljs": "^0.3.0"
+  },
+  "cordovaPlugins": []
+}
